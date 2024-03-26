@@ -1,0 +1,9 @@
+#arquivos ambiente virtual
+bin
+include
+lib
+lib64
+
+pyvenv.cfg
+
+#cache

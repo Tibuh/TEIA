@@ -1,0 +1,6 @@
+services:
+  backend-ia:
+    build: .
+    container_name: backend-ia
+    ports:
+      - "3500:5000"
