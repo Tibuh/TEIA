@@ -10,7 +10,7 @@ from langchain_core.prompts import PromptTemplate
 class PdfApi:
     def __init__(self, pdfName="ppcbcc.pdf"):
         warnings.filterwarnings("ignore")
-        self.pdfPathName = "./src/pdfs/"+pdfName
+        self.pdfPathName = "./src/pdfs/"
         self.GOOGLE_API_KEY='AIzaSyAIqN74c-rDNx-zQGv62PRvsI5Cd5NBZ5Q'
         self.GEMINI_MODEL_NAME = "gemini-pro"
         self.EMBEDDING_MODEL_NAME = "models/embedding-001"
@@ -23,8 +23,11 @@ class PdfApi:
 				Helpful Answer:"""
 
     def load_and_split_pdf(self, pdf_path):
-        pdf_loader = PyPDFLoader(pdf_path)
-        return pdf_loader.load_and_split()
+        lista_documento = []
+        for file in os.listdir(pdf_path):
+            pdf_loader = PyPDFLoader(pdf_path + file)
+            lista_documento.extend(pdf_loader.load_and_split())
+        return lista_documento
 
     def setup_gemini_model(self, model_name, api_key, temperature):
         return ChatGoogleGenerativeAI(
