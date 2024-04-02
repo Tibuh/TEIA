@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from pdfApi import PdfApi
+from documentsApi import DocumentsApi
 
 app = Flask(__name__)
 
@@ -11,12 +12,20 @@ def hello_world():
 def question_post():
     data = request.json
 
-    api = PdfApi()
+    pathName = data.get('document')    
+    api = PdfApi(pathName)
 
     response = api.pdf_response(data.get('question'))
 
     return jsonify(
         response = response["result"],
+    )
+@app.get("/documents")
+def documents_availables():
+    listDocuments = DocumentsApi.Documents_avaibles()
+
+    return jsonify(
+        documents = listDocuments
     )
 
 if __name__ == '__main__':

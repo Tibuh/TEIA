@@ -1,4 +1,3 @@
-import os
 import warnings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -50,19 +49,6 @@ class PdfApi:
             chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
         )
     
-    def path_exist(self):
-         local = "./src/pdfs"
-
-         if os.path.isdir(local):
-            # Lista os itens no diretório
-            directory_contents = os.listdir(local)
-            
-            # Mostra os itens
-            print(f"Conteúdo da pasta '{local}':")
-            for item in directory_contents:
-                print(item)
-         else:
-            print(f"O caminho especificado '{local}' não é um diretório.")
 
     def pdf_response(self, question: str) -> str:
         pages = self.load_and_split_pdf(self.pdfPathName)
