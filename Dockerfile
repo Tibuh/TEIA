@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip
+RUN pip install gunicorn 
 RUN pip3 install -r requirements.txt
-RUN pip install --upgrade setuptools
 
 COPY . .
+WORKDIR /app/src
 
-CMD [ "python3", "src/main.py" ]
+ENTRYPOINT [ "gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "main:app" ]
