@@ -2,54 +2,54 @@
 - Gustavo Caetano Santos / gustavocaetano@academico.ufs.br /
 - Vitor Hugo Ribeiro Tibutrino de Melo / vitor.hugo@academico.ufs.br /
 
-# TEIA
+# Secretar.ia
 
-Projeto direcionado para unidade 2
+Projeto desenvolvido como parte da avaliação final na disciplina de Tópicos Especiais em Inteligência Artificial na Universidade Federal de Sergipe.
 
-## Infos
+### Tecnologias usadas:
 
-Versão do python: 3.12.2
+[Clique aqui para acessar o relatório.](https://github.com/Tibuh/TEIA/blob/main/tecnologias-usadas.md)
 
-## Preparação do ambiente
+### Repositório do Front-End
 
-Primeiro deve-se criar um ambiente virtual na pasta do projeto com o seguinte comando:
+[Clique aqui para acessá-lo](https://github.com/Gustavo-caetano/TEIA-Frontend).
 
-Linux:
+### Sobre o projeto
 
-```
-python3 -m venv .venv
-```
+O projeto se trata de um estudo de caso referente ao desenvolvimento de aplicações que fazem uso de Inteligência Artificial. Mais especificamente, no contexto de _Retrieval Augmented Generation_ (RAG).
 
-Windows:
+A aplicação consiste em um chatbot especializado em responder perguntas relacionadas ao Projeto
+Pedagógico do Curso de Graduação
+em Ciência da Computação da Universidade Federal de Sergipe.
 
-```
-py -3 -m venv .venv
-```
+> O Projeto Pedagógico pode ser acessado [aqui](https://github.com/Tibuh/TEIA/blob/main/src/pdfs/ppcbcc.pdf).
 
-Logo em seguida, deve-se ativar o ambiente virtual:
+O backend da aplicação (correspondente à este repositório) é feito em Python, com auxílio do framework Flask.
 
-Linux:
+### Como executar o projeto:
 
-```
-. .venv/bin/activate
-```
+#### Pré requisitos:
 
-Windows:
+- API Key do Google AI Studio, para ter acesso ao modelo do Gemini-Pro e o Embedding-001;
+  - Pode ser obtida por este [link](https://aistudio.google.com/).
+- Docker;
+- Docker-Compose;
+- Algum cliente de API REST (Postman, Insomnia, etc.) para efetuar requisições.
 
-```
-.venv\Scripts\activate
-```
-
-> Obs: caso dê erro informando que não é possível executar scripts no powershell execute esse comando no powershell como administrador: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
-
-Após ativar o ambiente virtual, instale as dependências:
-
-## Libs necessárias
+#### Passo a passo
 
 ```
-pip install Flask
-pip install --quiet langchain-community
-pip install --quiet langchain-google-genai
-pip install --quiet pyPDF
-pip install --quiet chromadb
+ git clone https://github.com/Tibuh/TEIA.git
+ cd ./TEIA
+ docker-compose up -d --build
+```
+
+Quando o Docker criar a imagem e subir o container da aplicação, a API poderá ser acessada a partir da url `http://localhost:3500/`.
+
+Para efetuar uma pergunta, basta enviar uma requisição do tipo **POST** para o endpoint `http://localhost:3500/question`, com o seguinte _body_:
+
+```
+{
+  "question": SUA_PERGUNTA
+}
 ```
