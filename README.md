@@ -53,3 +53,7 @@ Para efetuar uma pergunta, basta enviar uma requisição do tipo **POST** para o
   "question": SUA_PERGUNTA
 }
 ```
+
+#### Exemplo de requisição utilizando o Postman
+![image](https://github.com/Tibuh/TEIA/assets/66384277/ce7bc792-72ef-43d9-a92f-9f365c322838)
+
