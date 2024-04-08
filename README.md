@@ -1,6 +1,6 @@
 - Gabriel de Oliveira Santos / g4briel720@academico.ufs.br / 0009-0002-5996-3365
 - Gustavo Caetano Santos / gustavocaetano@academico.ufs.br /
-- Vitor Hugo Ribeiro Tibutrino de Melo / vitor.hugo@academico.ufs.br /
+- Vitor Hugo Ribeiro Tibutrino de Melo / vitor.hugo@academico.ufs.br / 0009-0003-3816-8933
 
 # Secretar.ia
 
