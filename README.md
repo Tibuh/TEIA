@@ -7,6 +7,7 @@
 Projeto desenvolvido como parte da avaliação final na disciplina de Tópicos Especiais em Inteligência Artificial na Universidade Federal de Sergipe.
 
 ### Acesse a aplicação:
+> **Obs.:** para testar a aplicação, é preciso informar com antecedência para que possamos ligar o ambiente da AWS e, consequentemente, subir o backend.
 [Clique aqui para acessar a aplicação.](https://6614b252fd23f900081c496c--secretar-ia.netlify.app/)
 
 ### Tecnologias usadas:
