@@ -9,7 +9,7 @@ Projeto desenvolvido como parte da avaliação final na disciplina de Tópicos E
 ### Acesse a aplicação:
 > **Obs.:** para testar a aplicação, é preciso informar com antecedência para que possamos ligar o ambiente da AWS e, consequentemente, subir o backend.
 > 
-[Clique aqui para acessar a aplicação.](https://6614b252fd23f900081c496c--secretar-ia.netlify.app/)
+[Clique aqui para acessar a aplicação.](https://6615252a891d2500098848ea--secretar-ia.netlify.app/)
 
 ### Tecnologias usadas:
 
