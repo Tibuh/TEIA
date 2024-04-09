@@ -7,7 +7,7 @@
 Projeto desenvolvido como parte da avaliação final na disciplina de Tópicos Especiais em Inteligência Artificial na Universidade Federal de Sergipe.
 
 ### Acesse a aplicação:
-[Clique aqui para acessar a aplicação.](https://6613a1c40891b76b6847cb9b--secretar-ia.netlify.app/)
+[Clique aqui para acessar a aplicação.](https://6614b252fd23f900081c496c--secretar-ia.netlify.app/)
 
 ### Tecnologias usadas:
 
